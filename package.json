@@ -2,6 +2,7 @@
   "name": "whoami",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
+  "homepage": "http://mujdecisy.github.io/pwa-whoami",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
