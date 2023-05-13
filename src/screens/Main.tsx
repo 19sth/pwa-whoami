@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useKeepAwake } from 'expo-keep-awake';
 import { Layout, Header, SizeScheme } from 'react-native-pieces';
 import { View, Text } from 'react-native';
 import data from '../data.json';
@@ -23,6 +24,8 @@ export default function Main({ navigation, route }) {
     const [waitSec, setWaitSec] = useState(0);
     const [counter, setCounter] = useState(0);
     const size = SizeScheme.get().screen.height.min - 145;
+
+    useKeepAwake();
 
     useEffect(() => {
         setTimeout(() => {
