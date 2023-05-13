@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/static/js/main.10cd2c54.js",
-    "static/js/387.4372e3b3.js": "/static/js/387.4372e3b3.js",
-    "favicon.ico": "/favicon.ico",
-    "index.html": "/index.html",
-    "favicon-32.png": "/favicon-32.png",
-    "favicon-16.png": "/favicon-16.png",
-    "serve.json": "/serve.json",
-    "manifest.json": "/manifest.json",
-    "main.10cd2c54.js.map": "/static/js/main.10cd2c54.js.map",
-    "387.4372e3b3.js.map": "/static/js/387.4372e3b3.js.map"
+    "main.js": "/pwa-whoami/static/js/main.10cd2c54.js",
+    "static/js/387.4372e3b3.js": "/pwa-whoami/static/js/387.4372e3b3.js",
+    "favicon.ico": "/pwa-whoami/favicon.ico",
+    "index.html": "/pwa-whoami/index.html",
+    "favicon-32.png": "/pwa-whoami/favicon-32.png",
+    "favicon-16.png": "/pwa-whoami/favicon-16.png",
+    "serve.json": "/pwa-whoami/serve.json",
+    "manifest.json": "/pwa-whoami/manifest.json",
+    "main.10cd2c54.js.map": "/pwa-whoami/static/js/main.10cd2c54.js.map",
+    "387.4372e3b3.js.map": "/pwa-whoami/static/js/387.4372e3b3.js.map"
   },
   "entrypoints": [
     "static/js/387.4372e3b3.js",
