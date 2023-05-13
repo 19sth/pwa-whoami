@@ -13,7 +13,7 @@ const enum StepTypes {
 }
 
 const MODE_DATA = {
-    [ModeTypes.CHARACTERS] : data,
+    [ModeTypes.CHARACTERS]: data,
     [ModeTypes.CHARACTERS_TURKISH]: dataTurkey
 }
 
@@ -21,20 +21,30 @@ export default function Main({ navigation, route }) {
     const [num, setNum] = useState(getRandomInt(0, MODE_DATA[route.params.mode].length));
     const [step, setStep] = useState(StepTypes.NOT_STARTED);
     const [waitSec, setWaitSec] = useState(0);
+    const [counter, setCounter] = useState(0);
     const size = SizeScheme.get().screen.height.min - 145;
 
-    useEffect(()=>{
-        setTimeout(()=>{
-            const newWaitSec = waitSec-1;
+    useEffect(() => {
+        setTimeout(() => {
+            const newWaitSec = waitSec - 1;
             if (step === StepTypes.HALT) {
                 if (newWaitSec !== -1) {
                     setWaitSec(newWaitSec);
                 } else {
+                    setCounter(0);
                     setStep(StepTypes.IN_PROGRESS);
                 }
             }
         }, 1000);
-    }, [waitSec])
+    }, [waitSec]);
+
+    useEffect(() => {
+        setTimeout(() => {
+            if (step === StepTypes.IN_PROGRESS) {
+                setCounter(counter + 1);
+            }
+        }, 1000);
+    }, [counter, step])
 
     let button;
     if (step === StepTypes.NOT_STARTED) {
@@ -81,6 +91,11 @@ export default function Main({ navigation, route }) {
                             {(step === StepTypes.NOT_STARTED) && '↖︎      Click Play        '}
                         </Text>
                     </View>
+                </View>
+                <View>
+                    <Text>
+                        {(step === StepTypes.IN_PROGRESS) && counter.toString()}
+                    </Text>
                 </View>
             </View>
         </Layout>
