@@ -15,7 +15,7 @@ export default function Menu({ navigation }) {
                     {
                         faIcon: faCircleQuestion,
                         handleClick: () => {
-                            console.log('testing');
+                            window.open("https://mujdecisy.github.io/app/whoami-board-game", "blank");
                         }
                     }
                 ]}
