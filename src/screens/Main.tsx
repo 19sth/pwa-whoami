@@ -4,6 +4,7 @@ import { Layout, Header, SizeScheme } from 'react-native-pieces';
 import { View, Text } from 'react-native';
 import data from '../data.json';
 import dataTurkey from '../data-turkey.json';
+import dataCountries from '../data-countries.json';
 import { ModeTypes, getRandomInt } from '../util';
 import { faRefresh, faPlay, faMultiply } from '@fortawesome/free-solid-svg-icons';
 
@@ -15,7 +16,8 @@ const enum StepTypes {
 
 const MODE_DATA = {
     [ModeTypes.CHARACTERS]: data,
-    [ModeTypes.CHARACTERS_TURKISH]: dataTurkey
+    [ModeTypes.CHARACTERS_TURKISH]: dataTurkey,
+    [ModeTypes.COUNTRIES]: dataCountries
 }
 
 export default function Main({ navigation, route }) {

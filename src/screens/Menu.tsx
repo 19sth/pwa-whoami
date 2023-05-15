@@ -30,6 +30,10 @@ export default function Menu({ navigation }) {
                 <ButtonText
                     label='Characters from Turkey'
                     handleClick={()=>{navigation.navigate("Main", {mode: ModeTypes.CHARACTERS_TURKISH})}}/>
+                <Takoz />
+                <ButtonText
+                    label='Countries'
+                    handleClick={()=>{navigation.navigate("Main", {mode: ModeTypes.COUNTRIES})}}/>
 
             </View>
 

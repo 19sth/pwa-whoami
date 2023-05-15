@@ -6,5 +6,6 @@ export function getRandomInt(min: number, max: number) {
 
 export enum ModeTypes {
     CHARACTERS,
-    CHARACTERS_TURKISH
+    CHARACTERS_TURKISH,
+    COUNTRIES
 }
