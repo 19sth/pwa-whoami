@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useKeepAwake } from 'expo-keep-awake';
-import { Layout, Header, SizeScheme } from 'react-native-pieces';
+import { Layout, Header, SizeScheme, ButtonIcon } from 'react-native-pieces';
 import { View, Text } from 'react-native';
 import data from '../data.json';
 import dataTurkey from '../data-turkey.json';
@@ -83,25 +83,24 @@ export default function Main({ navigation, route }) {
             <Header
                 title={'WhoAmI'}
                 navigation={navigation}
-                buttons={[
-                    button
-                ]}
             />
             <View style={{ minHeight: size }}>
-                <View style={{ height: '100%', justifyContent: 'center', alignItems: 'center' }}>
+                <View style={{ height: '90%', justifyContent: 'center', alignItems: 'center' }}>
                     <View style={{ transform: [{ rotate: '90deg' }] }}>
-                        <Text style={{ width: size - 50, textAlign: 'center', fontSize: SizeScheme.get().font.a * 2, fontWeight: 'bold' }}>
+                        <Text style={{ width: size - 150, textAlign: 'center', fontSize: SizeScheme.get().font.a * 2, fontWeight: 'bold' }}>
                             {(step === StepTypes.IN_PROGRESS) && MODE_DATA[route.params.mode][num]}
                             {(step === StepTypes.HALT) && waitSec}
-                            {(step === StepTypes.NOT_STARTED) && '↖︎      Click Play        '}
+                            {(step === StepTypes.NOT_STARTED) && '      Click to Play        '}
                         </Text>
                     </View>
                 </View>
-                <View>
-                    <Text>
-                        {(step === StepTypes.IN_PROGRESS) && counter.toString()}
-                    </Text>
+                <View style={{width: 30, transform: [{rotate: '90deg'}], alignItems: 'center'}}>
+                    <ButtonIcon
+                        faIcon={button.faIcon}
+                        handleClick={button.handleClick}
+                        fontSize={40}/>
                 </View>
+
             </View>
         </Layout>
     );
