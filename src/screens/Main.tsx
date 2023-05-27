@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useKeepAwake } from 'expo-keep-awake';
-import { Layout, Header, SizeScheme, ButtonIcon } from 'react-native-pieces';
+import { Layout, Header, SizeScheme, ButtonIcon } from '@19sth/react-native-pieces';
 import { View, Text } from 'react-native';
 import data from '../data.json';
 import dataTurkey from '../data-turkey.json';

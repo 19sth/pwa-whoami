@@ -1,7 +1,7 @@
 import React from 'react';
-import { Layout, Header, ButtonText, Takoz, SizeScheme } from 'react-native-pieces';
+import { Layout, Header, ButtonText, Takoz, SizeScheme } from '@19sth/react-native-pieces';
 import { faCircleQuestion } from '@fortawesome/free-solid-svg-icons';
-import { View } from 'react-native';
+import { Linking, View } from 'react-native';
 import { ModeTypes } from '../util';
 
 export default function Menu({ navigation }) {
@@ -15,7 +15,11 @@ export default function Menu({ navigation }) {
                     {
                         faIcon: faCircleQuestion,
                         handleClick: () => {
-                            window.open("https://mujdecisy.github.io/app/whoami-board-game", "blank");
+                            Linking.openURL(
+                                "https://mujdecisy.github.io/app/whoami-board-game"
+                            ).catch(err => {
+                                console.error(err);
+                            });
                         }
                     }
                 ]}
